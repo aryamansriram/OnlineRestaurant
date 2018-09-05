@@ -1,0 +1,495 @@
+body {
+	background-color:rgba(0,0,0,1);
+	color:rgba(255,255,255,1);
+}
+.r4logo {
+	position: relative;
+	left: 20px;
+	bottom: 0;
+	font-family: "Times New Roman", Times, serif;
+	color:rgba(255,255,255,0.8);
+}
+.toolbar {
+	padding:10px 0px;
+	background-color:rgba(0,0,0,1);
+	position:sticky;
+	top:0px;
+	/*top:8px;*/
+	z-index:1;
+}
+.toolbarImage {
+	width:30px;
+	position:relative;
+	top: 5px;
+}
+a.logoLink:link{
+	text-decoration:none;
+	color:rgba(255,255,255,0.7);
+}
+a.logoLink:visited{
+	text-decoration:none;
+	color:rgba(255,255,255,0.7);
+}
+a.logoLink:hover{
+	text-decoration:none;
+	color:rgba(255,255,255,1);
+}
+a.logoLink:active{
+	text-decoration:none;
+	color:rgba(155,155,155,1);
+}
+a.toolbarLink:link{
+	text-decoration:none;
+	color:rgba(144,136,124,1);
+}
+a.toolbarLink:visited{
+	text-decoration:none;
+	color:rgba(144,136,124,1);
+}
+a.toolbarLink:hover{
+	text-decoration:none;
+	color:rgba(174,134,72,1);
+}
+a.toolBarLink:active{
+	text-decoration:none;
+	color:rgba(155,155,155,1);
+}
+.toolbarList{
+	display:inline-block;
+	font-family:Verdana;
+	font-size:1em;
+	list-style-type:none;
+	text-align: center;
+	color:rgba(255,255,255,0.7);
+}
+.toolbarList li{
+	display:inline-block;
+}
+.pipe{
+	color:rgba(174,134,72,1);
+}
+.container{
+	position: relative;
+}
+.textOverlay{
+	background:rgba(0,0,0,0.3);
+	position:absolute;
+	top:0px; right:0px; bottom:0px; left:0px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	flex-direction:column;
+	font-family:Verdana;
+}
+.button1{
+    background-color:rgba(174,134,72,1);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:4px;
+}
+.button2{
+    background-color:rgba(255,255,255,1);
+    color:rgba(174,134,72,1);
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:4px;
+}
+a.button1:hover{
+	background-color:rgba(143,38,38,1);
+}
+input.button1:hover{
+	background-color:rgba(143,38,38,1);
+}
+a.button2:hover{
+	background-color:rgba(143,38,38,1);
+	color:rgba(255,255,255,1);
+}
+.cursive{
+	text-align:center;
+	font-family:"Monotype Corsiva";
+	font-size:2.75em;
+}
+.parallax1 {
+	position:relative;
+    /* The image used */
+    background-image: url("images/parallax1.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax2 {
+	position:relative;
+    /* The image used */
+    background-image: url("images/parallax2.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax3 {
+	position:relative;
+    /* The image used */
+    background-image: url("images/parallax3.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax4 {
+	position:relative;
+    /* The image used */
+    background-image: url("images/parallax4.jpg");
+    /*background-size: cover;*/
+
+    /*Set a specific height */
+    min-height: 640px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.parallax5 {
+    position:relative;
+    /* The image used */
+    background-image: url("images/parallax5.jpg");
+    /*background-size: cover;*/
+
+    /*Set a specific height */
+    min-height: 640px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.parallax6 {
+    position:relative;
+    /* The image used */
+    background-image: url("images/parallax6.jpg");
+    /*background-size: cover;*/
+
+    /*Set a specific height */
+    min-height: 400px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.parallax7 {
+    position:relative;
+    /* The image used */
+    background-image: url("images/parallax7.jpg");
+    background-size: cover;
+
+    /*Set a specific height */
+    min-height: 650px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.signup {
+	margin:auto;
+	width:80%;
+	font-family:Verdana;
+	background:rgba(0,0,0,0.3);
+	position:relative;
+	top:0px; right:0px; bottom:0px; left:0px;
+}
+.formelement {
+	text-overflow:auto;
+	padding:20px;
+}
+input.formele{
+  width:80%;
+  padding:10px 10px;
+  float:right;
+  font-size:100%;
+  border:1px solid rgb(180,180,180);
+}
+input[type=text]:focus, input[type=number]:focus, input[type=address]:focus, input[type=email]:focus, input[type=password]:focus {
+	border:2px solid rgba(143,38,38,1);
+	/*border-color:rgba(143,38,38,1);*/
+}
+input[type=submit]:hover, input[type=reset]:hover {
+	background-color:rgba(143,38,38,1);
+}
+input.formbutton{
+    background-color:rgba(174,134,72,1);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:4px;
+}
+.aboutText{
+    padding:100px 0px;
+    background-color:rgba(255,255,255,1);
+    /*font-family:"Monotype Corsiva";*/
+    font-size:1.3em;
+    color:rgba(0,0,0,1);
+}
+.rotPlus{
+    float:right;
+    width:50px; 
+    z-index:100;
+    transition-property:transform;
+    transition-duration:1s;
+    transition-timing-function:linear;
+}
+.rotPlus:hover{
+    transform:rotate(225deg);
+}
+.menuHeading{
+    color:rgba(0,0,0,1);
+    background-color:rgba(255,255,255,1);
+    font-size:2em;
+    font-family:Verdana;
+    text-align:center;
+    padding:60px;
+    border:1px rgba(0,0,0,0.15) solid;
+}
+#m1 #m2 #m3 #m4 #m5{
+    transition: background 2s, color 2s;
+}
+#m1:hover{
+    /*width: 100%;
+    height: 100%;*/
+    color:rgba(255,255,255,1);
+    background: url('images/menu1.jpg') no-repeat center center fixed;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    -webkit-animation: myfirst 2s ; /* Chrome, Safari, Opera */
+    animation: myfirst 2s ;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+    from {opacity: 0.2;}
+    to {opacity: 1;}
+}
+#m2:hover{
+    /*width: 100%;
+    height: 100%;*/
+    color:rgba(255,255,255,1);
+    background: url('images/menu2.jpg') no-repeat center center fixed;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    -webkit-animation: myfirst 2s ; /* Chrome, Safari, Opera */
+    animation: myfirst 2s ;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+    from {opacity: 0.2;}
+    to {opacity: 1;}
+}
+#m3:hover{
+    /*width: 100%;
+    height: 100%;*/
+    color:rgba(255,255,255,1);
+    background: url('images/menu3.jpg') no-repeat center center fixed;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    -webkit-animation: myfirst 2s ; /* Chrome, Safari, Opera */
+    animation: myfirst 2s ;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+    from {opacity: 0.2;}
+    to {opacity: 1;}
+}
+#m4:hover{
+    /*width: 100%;
+    height: 100%;*/
+    color:rgba(255,255,255,1);
+    background: url('images/menu4.jpg') no-repeat center center fixed;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    -webkit-animation: myfirst 2s ; /* Chrome, Safari, Opera */
+    animation: myfirst 2s ;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+    from {opacity: 0.2;}
+    to {opacity: 1;}
+}
+#m5:hover{
+    /*width: 100%;
+    height: 100%;*/
+    color:rgba(255,255,255,1);
+    background: url('images/menu5.jpg') no-repeat center center fixed;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    -webkit-animation: myfirst 2s ; /* Chrome, Safari, Opera */
+    animation: myfirst 2s ;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+    from {opacity: 0.2;}
+    to {opacity: 1;}
+}
+#items1{
+    color:rgba(142,23,23,1);
+    font-family:Verdana;
+    font-size:1.2em;
+    /*text-align:center;*/
+    background-color:rgba(255,255,255,1);
+    padding:15px;
+    display:none;
+}
+#items2{
+    color:rgba(142,23,23,1);
+    font-family:Verdana;
+    font-size:1.2em;
+    
+    background-color:rgba(255,255,255,1);
+    padding:15px;
+    display:none;
+}
+#items3{
+    color:rgba(142,23,23,1);
+    font-family:Verdana;
+    font-size:1.2em;
+    
+    background-color:rgba(255,255,255,1);
+    padding:15px;
+    display:none;
+}
+#items4{
+    color:rgba(142,23,23,1);
+    font-family:Verdana;
+    font-size:1.2em;
+    
+    background-color:rgba(255,255,255,1);
+    padding:15px;
+    display:none;
+}
+#items5{
+    color:rgba(142,23,23,1);
+    font-family:Verdana;
+    font-size:1.2em;
+    
+    background-color:rgba(255,255,255,1);
+    padding:15px;
+    display:none;
+}
+ul{
+    list-style-type:none;
+}
+li{
+    padding:10px;
+}
+li span{
+    color:rgba(120,120,120,1);
+}
+li input{
+    float:right;
+    font-family:Verdana;
+    font-size:0.8em;
+    padding:5px;
+}
+.locationContainer {
+    display:inline-block;
+    position: relative;
+    width: 33%;
+}
+
+.locationImage {
+      width: 100%;
+    height: auto;
+}
+
+.locationOverlay {
+    position: absolute;
+    top: 0%;
+    bottom: 0;
+    left: 0%;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:rgba(143,38,38,0.6);
+}
+
+.locationContainer:hover .locationOverlay {
+    opacity: 1;
+}
+
+.locationText {
+    color: white;
+    font-size:2em;
+    font-family:Verdana;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
