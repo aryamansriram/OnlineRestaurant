@@ -493,3 +493,14 @@ li input{
     transform: translate(-50%, -50%);
     text-align: center;
 }
+.cart{
+	font-family: Verdana;
+	font-size:1.7em;
+	color:rgba(174,134,72,1);
+	margin:0px 15px;
+}
+#bill{
+	font-family: Verdana;
+	font-size:0.9em;
+	color:rgba(255,255,255,1);
+}

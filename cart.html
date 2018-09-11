@@ -8,7 +8,7 @@
 	<script src="script.js"></script>
 	<title>4 RIVERS</title>
 </head>
-<body>
+<body style="background-image:url('images/parallax4.jpg');">
 	<!--Toolbar-->
 	<div class="toolbar">
 		<a href="homepage.html" class="logoLink">
@@ -26,18 +26,22 @@
 			<li><a href="login.html" class="toolbarLink"> LOGIN <i class="fa fa-user"></i></a></li>
 		</ul>
 	</div>
-	<!--Login-->
-	<div class="parallax4 textOverlay" padding="20px">
-		<form class="signup">
-			<div class="formelement" style="font-size:1.5em;"><b>SIGN UP</b></div>
-			<div class="formelement"><b>Username:</b>
-  			<input class="formele" type="text" name="username" placeholder="Enter your e-mail id"><br></div>
-			<div class="formelement"><b>Password:</b>
-  			<input class="formele" type="PASSWORD" name="password" placeholder=""><br></div>
-  			<div class="formelement"><input class="formbutton" type="submit" value="Login"></div>
- 			<div class="formelement" style="padding-bottom:0;">New user?</div>
- 			<div class="formelement" style="padding-top:0;"><a href="signup.html" class="button1">Sign up</a></div>
-		</form>
+	<!--Cart-->
+	<div class="cart">
+		Ordered Items:<br>
+		<span id="bill">
+			
+		</span>
+	</div>
+	<!--Newsletter-->
+	<div style="text-align:center;font-family:Verdana;padding:50px 0px;">
+		<div>SIGN UP FOR OUR NEWSLETTER!</div><br>
+		<div>
+			<form>
+				<input type="EMAIL" name="mailid" placeholder="EMAIL*" style="padding:14px 5px;border-radius:4px;width:25%">
+				<input type="submit" value="SUBSCRIBE" class="button1">
+			</form>
+		</div>
 	</div>
 </body>
 </html>
