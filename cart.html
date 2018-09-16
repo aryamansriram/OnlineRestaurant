@@ -12,7 +12,7 @@
 	<!--Toolbar-->
 	<div class="toolbar">
 		<a href="homepage.html" class="logoLink">
-			<img class="toolbarImage" src="images/mstile-144x144.png">
+			<img class="toolbarImage" src="C:\\Users\\Aryaman Sriram\Documents\DBMS-Restaurant\images/mstile-144x144.png">
 			<span class="r4logo" style="font-size:1.5em">4 RIVERS</span>
 		</a>
 		<ul class="toolbarList" style="position:relative; left:24.5%;">
@@ -27,10 +27,22 @@
 		</ul>
 	</div>
 	<!--Cart-->
-	<div class="cart">
+	<div class="cart" id="ACART">
 		Ordered Items:<br>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+            <th>NAME</th>
+              <th>CATEGORY</th>
+              <th>QTY</th>
+        </tr>
+      </thead>
+      <tbody id="items-j">
+      </tbody>
+    </table>
 		<span id="bill">
-			
+
 		</span>
 	</div>
 	<!--Newsletter-->
@@ -43,5 +55,54 @@
 			</form>
 		</div>
 	</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+
+  <script>
+  var getParams = function (url) {
+  var params = {};
+  var parser = document.createElement('a');
+  parser.href = url;
+  var query = parser.search.substring(1);
+  var vars = query.split('&');
+  for (var i = 0; i < vars.length; i++) {
+    var pair = vars[i].split('=');
+    params[pair[0]] = decodeURIComponent(pair[1]);
+  }
+  return params;
+  };
+
+params = getParams(window.location.href);
+
+
+ $.ajax({
+   url: "http://localhost:3000/selecteddishes",
+   type: "GET",
+   data: params,
+   success: function(response){
+  //   for(x in response){
+    //   console.log(x)
+      // console.log(response[x])
+     //}
+    console.log(response);
+    for(i=0;i<response.length;i++)
+    {
+      //document.getElementById('ACART').innerHTML = response[i][0]
+      if(response[i][0] !== undefined){
+      $('#items-j').append("<tr><td>"+response[i][0].id+"</td><td>" + response[i][0].item + "</td><td>" + response[i][0].category + "</td><td>"+response[i][0].qty+"</td>");
+    }
+    }
+
+   },
+   error: function(err){
+     throw err;
+   }
+ })
+
+  </script>
+
+
 </body>
 </html>

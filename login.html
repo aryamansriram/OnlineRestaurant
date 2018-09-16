@@ -12,7 +12,7 @@
 	<!--Toolbar-->
 	<div class="toolbar">
 		<a href="homepage.html" class="logoLink">
-			<img class="toolbarImage" src="images/mstile-144x144.png">
+			<img class="toolbarImage" src="C:\\Users\\Aryaman Sriram\Documents\DBMS-Restaurant\images/mstile-144x144.png">
 			<span class="r4logo" style="font-size:1.5em">4 RIVERS</span>
 		</a>
 		<ul class="toolbarList" style="position:relative; left:24.5%;">
@@ -22,7 +22,7 @@
 			<li><a href="about.html" class="toolbarLink">ABOUT US</a></li>
 		</ul>
 		<ul class="toolbarList" style="float:right; margin-right:5px;">
-			<li><a href="cart.html" class="toolbarLink"> CART <i class="fa fa-shopping-cart"></i></a><span class="pipe"> | </span></li>
+			<li><a href="#CART" class="toolbarLink"> CART <i class="fa fa-shopping-cart"></i></a><span class="pipe"> | </span></li>
 			<li><a href="login.html" class="toolbarLink"> LOGIN <i class="fa fa-user"></i></a></li>
 		</ul>
 	</div>
@@ -31,13 +31,40 @@
 		<form class="signup">
 			<div class="formelement" style="font-size:1.5em;"><b>SIGN UP</b></div>
 			<div class="formelement"><b>Username:</b>
-  			<input class="formele" type="text" name="username" placeholder="Enter your e-mail id"><br></div>
+  			<input class="formele" type="text" name="username" placeholder="Enter your e-mail id" id=1><br></div>
 			<div class="formelement"><b>Password:</b>
-  			<input class="formele" type="PASSWORD" name="password" placeholder=""><br></div>
-  			<div class="formelement"><input class="formbutton" type="submit" value="Login"></div>
+  			<input class="formele" type="PASSWORD" name="password" placeholder="" id=2><br></div>
+  			<div class="formelement"><input class="formbutton" type="submit" value="Login" id="login"></div>
  			<div class="formelement" style="padding-bottom:0;">New user?</div>
  			<div class="formelement" style="padding-top:0;"><a href="signup.html" class="button1">Sign up</a></div>
 		</form>
 	</div>
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
+	<script>
+	$("#login").click(function(){
+		file1 = {email: $("#"+1).val(), password: $("#"+2).val()}
+		//console.log(JSON.stringify(file1))
+		$.ajax({
+			url: "http://localhost:3000/login",
+			type: "GET",
+			data: file1,
+			success: function(response){
+				//console.log(response)
+				if(response === "Valid User")
+				{
+					document.location.href = "C:\\Users\\Aryaman Sriram\\Documents\\OnlineRestaurant-master/menu.html"
+				}
+				else {
+					console.log(response)
+				}
+			}
+
+		})
+
+	})
+
+
+	</script>
+
 </body>
 </html>

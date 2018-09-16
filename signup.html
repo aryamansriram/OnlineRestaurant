@@ -11,7 +11,7 @@
 	<!--Toolbar-->
 	<div class="toolbar">
 		<a href="homepage.html" class="logoLink">
-			<img class="toolbarImage" src="images/mstile-144x144.png">
+			<img class="toolbarImage" src="C:\\Users\\Aryaman Sriram\Documents\DBMS-Restaurant\images/mstile-144x144.png">
 			<span class="r4logo" style="font-size:1.5em">4 RIVERS</span>
 		</a>
 		<ul class="toolbarList" style="position:relative; left:24.5%;">
@@ -21,7 +21,7 @@
 			<li><a href="about.html" class="toolbarLink">ABOUT US</a></li>
 		</ul>
 		<ul class="toolbarList" style="float:right; margin-right:5px;">
-			<li><a href="cart.html" class="toolbarLink"> CART <i class="fa fa-shopping-cart"></i></a><span class="pipe"> | </span></li>
+			<li><a href="#CART" class="toolbarLink"> CART <i class="fa fa-shopping-cart"></i></a><span class="pipe"> | </span></li>
 			<li><a href="login.html" class="toolbarLink"> LOGIN <i class="fa fa-user"></i></a></li>
 		</ul>
 	</div>
@@ -29,17 +29,17 @@
 	<div class="parallax4 textOverlay">
 		<form class="signup">
 			<div class="formelement">First name:
-  			<input class="formele" type="text" name="fname" placeholder=""><br></div>
+  			<input class="formele" type="text" name="fname" placeholder="" id=1><br></div>
 			<div class="formelement">Last name:
-  			<input class="formele" type="text" name="lname" placeholder=""><br></div>
+  			<input class="formele" type="text" name="lname" placeholder="" id=2><br></div>
   			<div class="formelement">Email:
-  			<input class="formele" type="EMAIL" name="mailid" placeholder=""><br></div>
+  			<input class="formele" type="text" name="mailid" placeholder="" id=3><br></div>
   			<div class="formelement">Password:
-  			<input class="formele" type="PASSWORD" name="password" placeholder=""><br></div>
+  			<input class="formele" type="PASSWORD" name="password" placeholder="" id=4><br></div>
   			<div class="formelement">Re-type password:
-  			<input class="formele" type="PASSWORD" name="repassword" placeholder=""><br></div>
+  			<input class="formele" type="PASSWORD" name="repassword" placeholder="" id=5><br></div>
   			<div class="formelement">Phone number:
-  			<input class="formele" type="text" name="phnumber" placeholder=""><br></div>
+  			<input class="formele" type="text" name="phnumber" placeholder="" id=6><br></div>
   			<!--<div class="formelement">Country/Region:
   			<input class="formele" type="text" name="country" placeholder=""><br></div>
   			<div class="formelement">Pincode:
@@ -54,9 +54,35 @@
   			<input class="formele" type="text" name="state" placeholder=""><br></div>-->
   			<div class="formelement">
   			<input type="checkbox" name="subscribe" value="Subscribe">Yes! I would like to receive your newsletters, coupons and/or specials.</div>
-  			<div class="formelement"><input class="formbutton" type="submit" value="SIGN UP">
+  			<div class="formelement"><input class="formbutton" type="submit" value="SIGN UP" id="sign_up">
   			<input class="formbutton" type="reset" value="RESET"></div>
 		</form>
 	</div>
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
+	<script>
+	$("#sign_up").click(function(){
+		if($("#"+4).val() === $("#"+5).val())
+	{
+		file = {fname: $("#"+1).val(),lname:$("#"+2).val(),email:$("#"+3).val(),password:$("#"+4).val(),pnumber:$("#"+6).val()}
+
+	//	console.log(JSON.stringify(file))
+		$.ajax({
+	    url: "http://localhost:3000/signup",
+	    type: "GET",
+	    data: file,
+	    success: function(response){
+				console.log(response)
+			}
+
+		})
+	}
+	else{
+		console.log("Password and Confirm Password do not match");
+
+	//	connect to front end
+	}
+
+	})
+		</script>
 </body>
 </html>
