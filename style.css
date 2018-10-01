@@ -125,7 +125,7 @@ a.button2:hover{
 .parallax1 {
 	position:relative;
     /* The image used */
-    background-image: url("images/parallax1.jpg");
+    background-image: url("FTEXTimages/parallax1.jpg");
 
     /* Set a specific height */
     min-height: 500px; 
@@ -499,8 +499,58 @@ li input{
 	color:rgba(174,134,72,1);
 	margin:0px 15px;
 }
+.cart table{
+    background-color:rgba(255,255,255,1);
+    color:rgba(0,0,0,1);
+    width:75%;
+    margin:auto;
+    text-align:center;
+    border:1px solid rgba(174,134,72,1);
+    border-collapse:collapse;
+}
+.cart th{
+    font-size:0.7em;
+    padding:5px;
+    background-color:rgba(174,134,72,0.3);
+    border:1px solid rgba(174,134,72,1);
+    border-collapse:collapse;
+}
+.cart td{
+    font-size:0.7em;
+    padding:5px;
+    border:1px solid rgba(174,134,72,1);
+    border-collapse:collapse;
+}
 #bill{
 	font-family: Verdana;
 	font-size:0.9em;
 	color:rgba(255,255,255,1);
+}
+.orderHistory{
+    font-family: Verdana;
+    font-size:1.7em;
+    color:rgba(174,134,72,1);
+    margin:0px 15px;
+}
+.orderHistory table{
+    background-color:rgba(255,255,255,1);
+    color:rgba(0,0,0,1);
+    width:75%;
+    margin:auto;
+    text-align:center;
+    border:1px solid rgba(174,134,72,1);
+    border-collapse:collapse;
+}
+.orderHistory th{
+    font-size:0.7em;
+    padding:5px;
+    background-color:rgba(174,134,72,0.3);
+    border:1px solid rgba(174,134,72,1);
+    border-collapse:collapse;
+}
+.orderHistory td{
+    font-size:0.7em;
+    padding:5px;
+    border:1px solid rgba(174,134,72,1);
+    border-collapse:collapse;
 }

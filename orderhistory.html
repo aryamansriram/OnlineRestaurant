@@ -6,9 +6,9 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon-192x192.ico" />
 	<script src="script.js"></script>
-	<title>4 RIVERS-cart</title>
+	<title>4 RIVERS-order history</title>
 </head>
-<body style="background-image:url('images/parallax4.jpg');">
+<body>
 	<!--Toolbar-->
 	<div class="toolbar">
 		<a href="homepage.html" class="logoLink">
@@ -26,26 +26,24 @@
 			<li><a href="login.html" class="toolbarLink"> LOGIN <i class="fa fa-user"></i></a></li>
 		</ul>
 	</div>
-	<!--Cart-->
-	<div class="cart" id="ACART">
-		Ordered Items:<br><br>
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>NAME</th>
-          <th>CATEGORY</th>
-          <th>QTY</th>
-        </tr>
-      </thead>
-      <tbody id="items-j">
-      </tbody>
-    </table>
-		<span id="bill">
-
-		</span>
-	</div><br><br>
-  <div><a href="orderhistory.html" class="button1" style="font-family:Verdana; margin:0px 15px;">ORDER HISTORY</a></div>
+	<!--Order history-->
+	<div class="orderHistory" id="">
+		Order History:<br><br>
+	    <table>
+   		   	<thead>
+    	    	<tr>
+    	      		<th>ID</th>
+        		  	<th>NAME</th>
+        		    <th>CATEGORY</th>
+        		    <th>QTY</th>
+        		    <th>ORDER ID</th>
+        		    <th>DATE OF PURCHASE</th>
+        		</tr>
+      		</thead>
+      		<tbody id="items-j">
+      		</tbody>
+    	</table>
+	</div>
 	<!--Newsletter
 	<div style="text-align:center;font-family:Verdana;padding:50px 0px;">
 		<div>SIGN UP FOR OUR NEWSLETTER!</div><br>
@@ -56,54 +54,5 @@
 			</form>
 		</div>
 	</div>-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-
-
-  <script>
-  var getParams = function (url) {
-  var params = {};
-  var parser = document.createElement('a');
-  parser.href = url;
-  var query = parser.search.substring(1);
-  var vars = query.split('&');
-  for (var i = 0; i < vars.length; i++) {
-    var pair = vars[i].split('=');
-    params[pair[0]] = decodeURIComponent(pair[1]);
-  }
-  return params;
-  };
-
-params = getParams(window.location.href);
-
-
- $.ajax({
-   url: "http://localhost:3000/selecteddishes",
-   type: "GET",
-   data: params,
-   success: function(response){
-  //   for(x in response){
-    //   console.log(x)
-      // console.log(response[x])
-     //}
-    console.log(response);
-    for(i=0;i<response.length;i++)
-    {
-      //document.getElementById('ACART').innerHTML = response[i][0]
-      if(response[i][0] !== undefined){
-      $('#items-j').append("<tr><td>"+response[i][0].id+"</td><td>" + response[i][0].item + "</td><td>" + response[i][0].category + "</td><td>"+response[i][0].qty+"</td>");
-    }
-    }
-
-   },
-   error: function(err){
-     throw err;
-   }
- })
-
-  </script>
-
-
 </body>
 </html>

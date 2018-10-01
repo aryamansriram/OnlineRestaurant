@@ -6,34 +6,34 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon-192x192.ico" />
 	<script src="script.js"></script>
-	<title>4 RIVERS</title>
+	<title>4 RIVERS-login</title>
 </head>
 <body>
 	<!--Toolbar-->
 	<div class="toolbar">
 		<a href="homepage.html" class="logoLink">
-			<img class="toolbarImage" src="C:\\Users\\Aryaman Sriram\Documents\DBMS-Restaurant\images/mstile-144x144.png">
+			<img class="toolbarImage" src="images/mstile-144x144.png">
 			<span class="r4logo" style="font-size:1.5em">4 RIVERS</span>
 		</a>
 		<ul class="toolbarList" style="position:relative; left:24.5%;">
-			<li><a href="menu.html" class="toolbarLink">MENU</a><span class="pipe">  |  </span></li>
+			<!--<li><a href="orderonline.html" class="toolbarLink">MENU</a><span class="pipe">  |  </span></li>-->
 			<li><a href="location.html" class="toolbarLink">LOCATION</a><span class="pipe"> | </span></li>
-			<li><a href="menu.html" class="toolbarLink">ORDER ONLINE</a><span class="pipe"> | </span></li>
+			<li><a href="orderonline.html" class="toolbarLink">ORDER ONLINE</a><span class="pipe"> | </span></li>
 			<li><a href="about.html" class="toolbarLink">ABOUT US</a></li>
 		</ul>
 		<ul class="toolbarList" style="float:right; margin-right:5px;">
-			<li><a href="#CART" class="toolbarLink"> CART <i class="fa fa-shopping-cart"></i></a><span class="pipe"> | </span></li>
+			<li><a href="cart.html" class="toolbarLink"> CART <i class="fa fa-shopping-cart"></i></a><span class="pipe"> | </span></li>
 			<li><a href="login.html" class="toolbarLink"> LOGIN <i class="fa fa-user"></i></a></li>
 		</ul>
 	</div>
 	<!--Login-->
 	<div class="parallax4 textOverlay" padding="20px">
-		<form class="signup">
+		<form class="signup" method="post">
 			<div class="formelement" style="font-size:1.5em;"><b>SIGN UP</b></div>
 			<div class="formelement"><b>Username:</b>
   			<input class="formele" type="text" name="username" placeholder="Enter your e-mail id" id=1><br></div>
 			<div class="formelement"><b>Password:</b>
-  			<input class="formele" type="PASSWORD" name="password" placeholder="" id=2><br></div>
+  			<input class="formele" type="PASSWORD" name="password" placeholder="Enter your password" id=2><br></div>
   			<div class="formelement"><input class="formbutton" type="submit" value="Login" id="login"></div>
  			<div class="formelement" style="padding-bottom:0;">New user?</div>
  			<div class="formelement" style="padding-top:0;"><a href="signup.html" class="button1">Sign up</a></div>
@@ -52,7 +52,7 @@
 				//console.log(response)
 				if(response === "Valid User")
 				{
-					document.location.href = "C:\\Users\\Aryaman Sriram\\Documents\\OnlineRestaurant-master/menu.html"
+					document.location.href = "C:\\Users\\Aryaman Sriram\\Documents\\OnlineRestaurant-master/orderonline.html"
 				}
 				else {
 					console.log(response)
