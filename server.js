@@ -18,9 +18,24 @@ connection.connect(function(err)
   console.log("Connected!");
   })
 
+var username;
+
 app.get("/selecteddishes",function(req,res){
   const data = req.query;
+
 //  response_list = {}
+
+count=0
+for(x in data){
+
+
+    connection.query("insert into customerorders set ?",{uname : username,dish: x, qty: data[x]},(err,result)=>{
+      if(err) throw err;
+    });
+    console.log("Success");
+
+}
+console.log('data',data);
   var i =0;
   var promises = [];
   var upromises = [];
@@ -34,20 +49,28 @@ app.get("/selecteddishes",function(req,res){
              reject(err);
            }else{
              resolve(result);
+             console.log(result);
            }
         })
       })
     );
 
   }
+  promises.push(new Promise((resolve, reject) => {
+    connection.query("select sum(qty*price) as total from menu where qty > 0",(err,result)=>{
+      if(err) throw reject(err);
+      console.log(result);
+      resolve(result);
+    })
+  }));
+
   console.log(promises.length);
+
   Promise.all(promises).then((result) => {
     res.send(result);
+    // console.log(result);
   });
-  connection.query("select sum(qty*price) as total from menu where qty > 0",(err,result)=>{
-    if(err) throw err;
-    console.log(result)
-  })
+
   connection.query("update menu set qty = NULL"),(err,result) =>{
     if(err) throw err;
   //  console.log(result);
@@ -56,7 +79,7 @@ app.get("/selecteddishes",function(req,res){
 
 })
 app.get("/signup",function(req,res){
-  console.log(req.query.email)
+  console.log(req.query)
   connection.query("select count(email) as mailcount from customer where email = ?",req.query.email,function(err,result){
     if(err) throw err;
     console.log(result)
@@ -87,9 +110,11 @@ app.get("/signup",function(req,res){
 
 
 })
+
 app.get("/login",function(req,res){
   //console.log(req.query)
   connection.query("select count(email) as mailcount from customer where email = ?",req.query.email,function(err,result){
+    username = req.query.email;
     user = result[0].mailcount
     if(user>0)
     {
